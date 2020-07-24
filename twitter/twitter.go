@@ -6,7 +6,11 @@ import (
 	"github.com/dghubble/sling"
 )
 
-const twitterAPI = "https://api.twitter.com/1.1/"
+var twitterAPI = "https://api.twitter.com/1.1/"
+
+func SetTwitterAPI(url string) {
+	twitterAPI = url
+}
 
 // Client is a Twitter client for making Twitter API requests.
 type Client struct {
